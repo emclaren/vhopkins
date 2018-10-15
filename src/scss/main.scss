@@ -1,0 +1,80 @@
+
+
+
+@import 'partials/reset';
+@import 'partials/mixin';
+@import 'partials/grid';
+@import 'partials/base';
+@import 'partials/header';
+@import 'partials/main-section';
+@import 'partials/festivals';
+@import 'partials/art-funding';
+@import 'partials/about';
+
+@import 'partials/work';
+
+
+
+
+
+//***Contact Styling ***/
+
+#contact{
+ z-index:500;
+ margin:0 auto;
+ // padding:1rem 0;
+ height: 85vh;
+ color: $font-color;
+
+
+ .contact-list{
+  height:60vh;
+  width:100%;
+  display: flex;
+  flex-direction:column;
+  list-style: none; 
+  padding:5rem 0;
+  li{
+
+    padding:.8rem;
+    text-align:center;
+    display:inline-block;
+  }
+  a{
+    color: $font-color;
+    // border-bottom:1px solid white;
+    // text-decoration-color: rgba(255,52,89, .7);
+    // text-decoration:none;
+    font-size:1.3rem;
+    transition: color .5s ease;
+    &:hover{
+      color: $font-accent;
+      transition: color 0.5s ease;
+      
+    }
+  }
+}
+@media screen and (min-width: $break-small) {
+  height:90vh;
+}
+@media screen and (min-width: $break-medium) {
+  height:90vh;
+  width:80%;
+  h2{
+   margin:3rem 1rem;
+ }
+ .contact-list{
+  flex-direction: row;
+  justify-content: center;
+
+}
+}
+
+}
+
+
+
+
+
+
+

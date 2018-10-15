@@ -1,0 +1,182 @@
+
+@font-face {
+    font-family: "Ionicons";
+    src: url("../assets/fonts/ionicons.woff") format("woff")
+  }
+  
+
+
+i{
+  font-family:  "Ionicons";
+  // src: url("/assets/fonts/ionicons.woff") format("woff");
+}
+
+.page-wrapper{
+  max-width:1250px;
+  margin: 0 1rem;
+
+  @media screen and (min-width: $break-medium) {
+    margin: 0 auto;
+  }
+}
+
+
+
+
+/* Global Styles  */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400');
+
+*{
+	box-sizing:border-box;
+}
+
+
+body, html {
+	background-color: white;
+	color:$font-color;
+	font-size: 18px;
+	margin:0;
+	max-width:100%;
+	z-index:0;
+	font-family:'Oswald', sans-serif;
+	// border: 2px blue solid;
+
+}
+
+
+h1, h2, h3{
+	// font-family: Open Sans, sans-serif;
+	// font-family: Oswald;
+	font-weight: bold;
+	text-transform:uppercase;
+	font-family:'Oswald', sans-serif;
+}
+
+h2{
+	
+	font-size: 1.75rem;
+	margin: 2rem 0 1rem 0;
+}
+
+
+h3{
+	font-size:1.5rem;
+	padding: .5rem 0;
+}
+
+
+p{
+
+	font: 1rem Roboto, Open Sans, sans-serif;
+	font-weight:400;
+	// font-family: Oswald;
+	font-family:'EB Garamond', serif
+}
+
+span{
+	padding:0;
+}
+
+	
+
+button{
+	border: solid 2px $font-color;
+	background-color:transparent;
+	border-radius:0;
+	height:50px;
+	font-size: 1.5rem;
+	font-weight:bold;
+	width:100%;
+	margin: 2rem 0;
+	color: $font-color;
+	transition: background-color .5s ease; 
+	background-color:#FFFFFF;
+
+	&:focus{
+		color: $font-color;
+		background-color: $font-accent;
+			outline:none;
+		box-shadow:none; 
+
+	}
+	&:hover{
+		cursor:pointer;
+		color: $font-color;
+		background-color: $font-accent;
+		transition: background-color .5s ease; 
+
+	}
+	&:active{
+		color: $font-color;
+		background-color: $font-accent;
+		transition: background-color .5s ease;
+
+	}
+
+}
+
+
+
+em{
+	font-style:italic;
+}
+
+
+i{
+  font-family:  "Ionicons";
+  src: url("assets/fonts/ionicons.woff") format("woff");
+}
+
+
+
+.text-center{
+	text-align:center;
+}
+
+
+
+.flex{
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+
+
+
+///***Container for the Background Triangles***//
+
+
+canvas { 
+	position:fixed; 
+	top:0; 
+	left:0; 
+	z-index:-3;
+}
+
+#p5container{ 
+	position:relative; 
+	z-index:6; 
+}
+
+
+
+
+
+
+@media screen and (min-width: $break-small) {
+	h2{
+		font-size:3rem;
+	}
+}
+@media screen and (min-width: $break-medium) {
+	h2{
+		font-size:3.5rem;
+	}
+	h3{
+		padding-bottom:0 0 .25rem 0
+	}
+	
+}
+
+

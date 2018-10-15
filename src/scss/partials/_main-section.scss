@@ -1,0 +1,71 @@
+
+
+//////////////////////*** Introduction Styling ***///////////////////////////
+
+#intro{
+    margin:0 auto;
+    text-align:center;
+    height: 100vh;
+    max-height:1250px;
+    a{
+      text-decoration:none;
+      font-size: 1.25rem;
+      color: $font-color;
+      transition: color .5s ease;
+      z-index:200;
+      &:hover{
+        transition: color 0.5s ease;
+        color: $font-accent;
+      }
+    }
+    p{
+      // align-self: center; 
+      // margin:1rem 0;
+      font-size: 1.1rem;
+      padding:0;
+      z-index:20;
+      text-align:left;
+      line-height: 1.3rem;
+    }
+    .text-wrapper{
+      // padding: 0 0 5rem 0;
+  
+      // width:80%;
+      // margin:0 auto;
+      left:1rem;
+      bottom:1rem;
+      background-color:rgba(255,255,255, .5);
+      position:absolute;
+  
+    }
+    .down-arrow{
+      position:absolute;
+      top:80vh;
+      left: 0; 
+      right: 0; 
+    }
+    @media screen and (min-width: $break-medium) {
+     max-width: 60%;
+     
+     .text-wrapper{
+      width:100%;
+      padding:0;
+      // position:center;
+    }
+    p{
+     font-size: 1rem;
+    
+   }
+  
+  
+  }
+  
+  
+  }
+
+  // .intro-first-line{
+
+  // }
+  
+  
+  

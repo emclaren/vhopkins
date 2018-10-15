@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	
+	
+	<title>Vincent R. Hopkins</title>
+	<link href="https://fonts.googleapis.com/css?family=EB+Garamond|Oswald" rel="stylesheet">
+	<link rel="stylesheet" href="dist/css/main.css" >
+	<meta name="theme-color" content="#ff3549">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=EB+Garamond|Oswald" rel="stylesheet">
+	
+</head>
+<style>
+	.links line {
+		stroke: #aaa;
+	}
+	
+	.nodes circle {
+		pointer-events: all;
+		stroke: none;
+		stroke-width: 40px;
+		fill: #0521AB;
+	}
+	
+	svg{  
+		/* position: fixed;
+		top: 0; */
+		/* width:1000px;
+		height:800px; */
+		/* z-index: -1; */
+		/* width:500;
+		height:500; */
+	}
+	.text-wrapper{
+		z-index:5;
+	}
+	.svg-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    vertical-align: top;
+    overflow: hidden;
+}
+.svg-content {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+</style>
+<body class="index" >
+	
+	<!-- Contain everything on page in wrapper -->
+	
+	<div id="p5container">
+		<header class= "site-header flex-wrap" > 
+			<!-- Left hand Side of Nav Bar-->
+			<div class="logo">
+				<a href="index.html">
+					<h1 class="logo-heading">Vincent R. Hopkins</h1>
+					<h2 class="logo-subheading">Political Researcher // Data Scientist</h2>
+				</a>
+			</div>
+			
+			<!-- Right hand Side of Nav Bar-->
+			<nav class="menu">
+				<ul class="nav-grid">
+					<li> <a  href="about.html">About</a></li>
+					<li> <a  href="projects.html">Projects</a></li>
+					<li> <a href="https://drive.google.com/file/d/1H2y3WO3hZsIWdQKUe4CziSz5XYaKfofp/view" target="_blank">CV</a></li>
+				</ul>
+			</nav> 
+		</header>
+		<div id="container" class="svg-container">
+			<svg  viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet" ></svg>
+		</div>
+		
+		
+		
+		<script src="https://d3js.org/d3.v4.min.js"></script>
+		<script>
+			
+			
+			var svg = d3.select("svg"),
+			width = +svg.attr("width"),
+			height = +svg.attr("height");
+			
+			var simulation = d3.forceSimulation()
+			.force("link", d3.forceLink().id(function(d) { return d.id; }))
+			.force("charge", d3.forceManyBody())
+			.force("center", d3.forceCenter(width / 2, height / 2));
+			
+			d3.json("../dist/assets/miserables.json", function(error, graph) {
+				if (error) throw error;
+				
+				var link = svg.append("g")
+				.attr("class", "links")
+				.selectAll("line")
+				.data(graph.links)
+				.enter().append("line");
+				
+				var node = svg.append("g")
+				.attr("class", "nodes")
+				.selectAll("circle")
+				.data(graph.nodes)
+				.enter().append("circle")
+				.attr("r", 2.5)
+				.call(d3.drag()
+				.on("start", dragstarted)
+				.on("drag", dragged)
+				.on("end", dragended));
+				
+				//   node.append("title")
+				// 	  .text(function(d) { return d.id; });
+				
+				simulation
+				.nodes(graph.nodes)
+				.on("tick", ticked);
+				
+				simulation.force("link")
+				.links(graph.links);
+				
+				function ticked() {
+					link
+					.attr("x1", function(d) { return d.source.x; })
+					.attr("y1", function(d) { return d.source.y; })
+					.attr("x2", function(d) { return d.target.x; })
+					.attr("y2", function(d) { return d.target.y; });
+					
+					node
+					.attr("cx", function(d) { return d.x; })
+					.attr("cy", function(d) { return d.y; });
+				}
+			});
+			
+			function dragstarted(d) {
+				if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+				d.fx = d.x;
+				d.fy = d.y;
+			}
+			
+			function dragged(d) {
+				d.fx = d3.event.x;
+				d.fy = d3.event.y;
+			}
+			
+			function dragended(d) {
+				if (!d3.event.active) simulation.alphaTarget(0);
+				d.fx = null;
+				d.fy = null;
+			}
+			
+			// d3.select(window).on('resize',resize);
+			// function resize(){
+			// 	//get width of window
+			// 	//update xScale and rScale
+			// 	//update radius of bubbles 
+			// 	simulation
+			// 	.force('x',d3.forceX(function(d){return xScale(d.n);}))
+			// 	.force('collide',d3.forceCollide(function(d){return rScale(d.m);}))
+			// 	// 0.3 is arbitrary
+			// 	.alpha(0.3)
+			// 	.restart()
+				
+			// 	console.log("hi")
+			// }
+		</script>
+		
+		<!-- 
+			<script src="dist/js/bundle.js"></script>
+		-->
+		
+	</body>
+	</html>
+	
