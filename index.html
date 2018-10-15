@@ -64,7 +64,7 @@
 			.force("charge", d3.forceManyBody())
 			.force("center", d3.forceCenter(500, 350));
 			
-			d3.json("../dist/assets/miserables.json", function(error, graph) {
+			d3.json("../vhopkins/dist/assets/miserables.json", function(error, graph) {
 				if (error) throw error;
 				
 				var link = svg.append("g")
