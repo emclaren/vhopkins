@@ -15,7 +15,7 @@
   
   
     h3{
-      font-size:1rem;
+      font-size:1.5rem;
       // font-weight:normal;
       // font-family: Roboto, Open Sans, sans-serif;
       padding: .25rem 0;
@@ -24,7 +24,7 @@
       margin: 0 auto;
       display:flex;
       align-items:center;
-      justify-content:center;
+      // justify-content:center;
       color:font-color;
       // text-transform:none;
     }
@@ -55,63 +55,6 @@
        transition: background-color .5s ease;
      }
    }
-  
-   /*Shuffle Tile Formatting*/
-  
-  
-   
-  .papercraft-thumbnail-lazy{
-      background-image: url('/assets/img/papercraft/papercraft-thumbnail-lazy.jpg');
-    background-size:cover;
-  }
-  
-  
-  
-  .hellop5-thumbnail-lazy{
-      background-image: url('/assets/img/hellop5/hellop5-thumbnail-lazy.jpg');
-    background-size:cover;
-  }
-  
-  
-  
-  .podcoaster-thumbnail-lazy{
-    background-image: url('/assets/img/podcoaster/podcoaster-thumbnail-lazy.jpg');
-    background-size:cover;
-  }
-  
-  
-  
-  .plantagotchi-thumbnail-lazy{
-    background-image: url('/assets/img/plantagotchi/plantagotchi-thumbnail-lazy.jpg');
-    background-size:cover;
-  }
-  
-  
-  
-  
-  .block-talks-thumbnail-lazy{
-    background-image: url('/assets/img/blocktalks/block-talks-thumbnail-lazy.jpg');
-    background-size:cover;
-  }
-  
-  .asking-for-a-friend-thumbnail-lazy{
-    background-image: url('/assets/img/asking/asking-for-a-friend-thumbnail-lazy.jpg');
-    background-size:cover;
-  }
-  
-  .earthgazing-thumbnail-lazy{
-    background-image: url('/assets/img/earthgazing/earthgazing-thumbnail-lazy.jpg');
-    background-size:cover;
-      
-  }
-  .audio-matic-thumbnail-lazy{
-    background-image: url('/assets/img/audiomatic/audio-matic-thumbnail-lazy.jpg');
-    background-size:cover;
-  }
-  .mind-full-thumbnail-lazy{
-    background-image: url('/assets/img/mindfull/mind-full-thumbnail-lazy.jpg');
-    background-size:cover;
-  }
   
   
    .aspect--size {
@@ -235,3 +178,17 @@
   
   
   
+
+  .single-project{
+
+    // margin:1rem;
+    max-width:80%;
+    margin:0 auto;
+  h3{
+    font-size:1.5rem;
+  }
+  }
+
+  #work{
+    margin-top:5rem
+  }

@@ -3,48 +3,48 @@
 
 
 #about{
-    // line-height:1.2rem;
-    height:90vh;
-    padding: 1rem 0;
-    background-color:rgba(255,255,255, .5);
-    li{
-      margin: .5rem 0;
-      line-height:1.3rem;
-      font-family: Roboto, Open Sans, sans-serif;
-    }
-    .about-intro{
-      text-align:justify;
-    }
-    .about-container{
-      margin: 0;
-    }
-    p{
-      margin: .75rem 0;
-    }
-    h3{
-     padding: 2rem 0 .5rem 0;
-  
-   }
-   @media screen and (min-width: $break-small) {
+  // line-height:1.2rem;
+  height:90vh;
+  padding: 2.75rem 0;
+  background-color:rgba(255,255,255, .5);
+  li{
+    margin: .5rem 0;
+    line-height:1.3rem;
+    font-family: Roboto, Open Sans, sans-serif;
+  }
+  .about-intro{
+    text-align:justify;
+  }
+  .about-container{
+    margin: 0;
+  }
+  p{
+    margin: .75rem 0;
+  }
+  h3{
+    padding: 2rem 0 .5rem 0;
+    
+  }
+  @media screen and (min-width: $break-small) {
     height:auto;
     .about-intro{
       padding:.75rem 0 0 0 ;
     }
     .about-container{
-      width: 80%;
-      margin:0 auto;
+      width: 50%;
+      // margin:0 auto;
     }
   }
   @media screen and (min-width: $break-medium) {
-   
+    
     padding: 1rem 0;
-    width: 50%;
-    margin: 20vh 1rem ;
+    width: 40%;
+    margin: 25vh 1rem ;
     padding:0;
-  
+    
     ul{
       margin: .5rem 2rem 2rem 2rem;
-  
+      
     }
     h3{
       padding:1rem 0 .5rem 0
@@ -52,12 +52,12 @@
     .about-intro{
       // padding:1.5rem 0  1rem 0 ;
       width:40vw;
-  
+      
     }
     .about-intro.research{
       width:100%
     }
-  
+    
     .about-container{
       width: 100%;
       margin:0 1rem;
@@ -65,24 +65,28 @@
       // justify-content:space-around;
     }
   }
-  }
-  
-  
-  
-  .profile-photo{
+}
+
+
+
+.profile-photo{
   // width:25%;
-width:100%;
-// position:fixed;
-@media screen and (min-width: $break-medium) {
-  // height:100vh;
-  width:50vw;
-  position:fixed;
-  bottom:1rem;
-  right:1rem;
-  filter: grayscale(40%)
+  width:100%;
+  // position:fixed;
+  @media screen and (min-width: $break-small) {
+width:40vw;
+right:1rem;
+position:fixed;
+  }
+  @media screen and (min-width: $break-large) {
+    // height:100vh;
+    width:50vw;
+
+    bottom:1rem;
+    right:1rem;
+    // filter: grayscale(40%)
   }
 }
-  
-  
-  
-  
+
+
+
