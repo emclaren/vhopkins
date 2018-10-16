@@ -266,3 +266,38 @@
     }
   }
   }
+
+
+  ion-icon {
+									
+    transition: transform ease .3s;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  .project-description{
+    padding:.5rem 0;
+  }
+  
+  .fa-rotate-45 {
+    transition: transform ease .3s;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  .project-title-span{
+    text-decoration: underline;
+    padding: .5rem 0;
+    line-height:1.7rem;
+  }
+  .project-title-span:hover{
+    cursor:pointer;
+    color:$font-accent;
+    transition: color 0.5s ease;
+    text-decoration:underline;
+  
+}
