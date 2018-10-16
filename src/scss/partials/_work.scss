@@ -163,10 +163,10 @@
   }
   @media screen and (min-width: $break-medium) {
     padding:0;
-    h2{
-      width:80%;
-      margin: 2rem auto;
-    }
+    // h2{
+    //   // width:80%;
+    //   // margin: 2rem auto;
+    // }
     #shuffleGrid{
       width:90%;
       margin:1rem auto;
@@ -183,12 +183,18 @@
 
     // margin:1rem;
     max-width:80%;
-    margin:0 auto;
+    margin:0 auto 3rem auto;
   h3{
     font-size:1.5rem;
   }
   }
 
   #work{
-    margin-top:5rem
+    // width: 40%;
+    margin: 25vh 1rem;
+    padding: 0;
   }
+
+
+
+  
