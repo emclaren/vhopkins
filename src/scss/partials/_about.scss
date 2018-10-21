@@ -1,9 +1,6 @@
-
 // About section styling
 
-
 #about{
-  // line-height:1.2rem;
   height:90vh;
   padding: 2.75rem 0;
   background-color:rgba(255,255,255, .5);
@@ -32,14 +29,12 @@
     }
     .about-container{
       width: 50%;
-      // margin:0 auto;
     }
   }
   @media screen and (min-width: $break-medium) {
-    
     padding: 1rem 0;
     width: 40%;
-    margin: 25vh 1rem ;
+    margin: 11rem 1rem ;
     padding:0;
     
     ul{
@@ -50,8 +45,8 @@
       padding:1rem 0 .5rem 0
     }
     .about-intro{
-      // padding:1.5rem 0  1rem 0 ;
-      width:40vw;
+
+      width:45vw;
       
     }
     .about-intro.research{
@@ -62,7 +57,7 @@
       width: 100%;
       margin:0 1rem;
       display:flex;
-      // justify-content:space-around;
+
     }
   }
 }
@@ -70,21 +65,18 @@
 
 
 .profile-photo{
-  // width:25%;
-  width:100%;
-  // position:fixed;
+  width:90vw;
   @media screen and (min-width: $break-small) {
-width:40vw;
-right:1rem;
-position:fixed;
+    width:40vw;
+    right:1rem;
+    position:fixed;
+    top: 5rem;
   }
   @media screen and (min-width: $break-large) {
-    // height:100vh;
     width:50vw;
-
+    top:auto;
     bottom:1rem;
     right:1rem;
-    // filter: grayscale(40%)
   }
 }
 
