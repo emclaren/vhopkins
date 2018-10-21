@@ -1,0 +1,28 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset='utf-8')
+    meta(name="theme-color" content="#0521AB")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Vincent R. Hopkins
+    link(href='dist/css/main.css', rel='stylesheet', type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=EB+Garamond|Oswald', rel='stylesheet', type='text/css')
+  body(class="index")
+    header(class= "site-header flex-wrap")
+
+        // Left hand Side of Nav Bar
+        div(class="logo")
+            a(href="index.html")
+                h1(class="logo-heading") Vincent R. Hopkins
+                h2(class="logo-subheading ") Political Researcher | Data Scientist
+
+        // Right hand Side of Nav Bar
+        nav(class="menu")
+            ul(class="nav-grid #{nav}")
+                li
+                    a(href="about.html") About
+                li
+                    a(href="projects.html") Projects
+
+
+                    //- (class="selected-nav") 
