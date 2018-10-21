@@ -1,3 +1,6 @@
+
+// Main Page D3 Script
+
 const d3 = require("d3");
 
 // Change the size of the d3 SVG relative to device width
@@ -21,8 +24,6 @@ var svg = d3.select("div#container")
 .append("svg")
 .attr("preserveAspectRatio", "xMinYMin meet")
 .attr("viewBox", viewBoxVar) // mobile
-// .attr("viewBox", "0 0 500 900") // mobile
-// .attr("viewBox", "0 0 1000 900") // desktop
 .classed("svg-content", true);
 width = +svg.attr("width"),
 height = +svg.attr("height");
@@ -31,8 +32,6 @@ var simulation = d3.forceSimulation()
 .force("link", d3.forceLink().id(function(d) { return d.id; }))
 .force("charge", d3.forceManyBody())
 .force("center", d3.forceCenter(centerHeight, centerWidth)); //mobile
-// .force("center", d3.forceCenter(250, 250)); //mobile
-// // .force("center", d3.forceCenter(500, 325)); //desktop
 
 d3.json("http://localhost:3000/dist/assets/data/data.json", function(error, graph) {
 if (error) throw error;
@@ -93,14 +92,3 @@ function dragended(d) {
 
 
 
-function toggle_visibility(id) {
-  var e = document.getElementById(id);
-  if(e.style.display == 'block')
-  e.style.display = 'none';
-  else
-  e.style.display = 'block';
-}
-function rotate_icon(id) {
-  var e = document.getElementById(id);
-  e.classList.toggle("fa-rotate-45");
-}
