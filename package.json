@@ -1,12 +1,12 @@
 {
-  "name": "fake-love-cover",
+  "name": "Vhopkins",
   "version": "1.0.0",
-  "description": "Cover Letter for Fake Love",
+  "description": "Vincent Hopkins Web Page",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/emclaren/fake-love-cover.git"
+    "url": "git+https://github.com/emclaren/vhopkins.git"
   },
-  "bugs": "https://github.com/emclaren/fake-love-cover",
+  "bugs": "https://github.com/emclaren/vhopkins",
   "scripts": {
     "autoprefixer": "postcss -u autoprefixer --map -r dist/css/main.css",
     "scss": "node-sass --output-style compressed -x -o dist/css/ src/scss",
@@ -44,8 +44,10 @@
     "stylelint-config-standard": "^18.2.0"
   },
   "dependencies": {
-    "plyr": "^3.4.3",
+    "d3": "^4.13.0",
     "p5": "^0.7.2",
+    "plyr": "^3.4.3",
+    "pug": "^2.0.3",
     "uglifyify": "^5.0.1"
   },
   "browserify": {
@@ -61,8 +63,7 @@
     ],
     "sourceMaps": "inline"
   },
-  "stylelint":{
-  "extends": "stylelint-config-standard"
+  "stylelint": {
+    "extends": "stylelint-config-standard"
   }
-
 }

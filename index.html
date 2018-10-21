@@ -2,142 +2,38 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	
-	
 	<title>Vincent R. Hopkins</title>
 	<link href="https://fonts.googleapis.com/css?family=EB+Garamond|Oswald" rel="stylesheet">
 	<link rel="stylesheet" href="dist/css/main.css" >
 	<meta name="theme-color" content="#0521AB">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="https://fonts.googleapis.com/css?family=EB+Garamond|Oswald" rel="stylesheet">
 	
 </head>
 <style>
-
+	
 </style>
 <body class="index" >
-	
-	<!-- Contain everything on page in wrapper -->
-	
-	<div id="p5container">
-		<header class= "site-header flex-wrap" > 
-			<!-- Left hand Side of Nav Bar-->
-			<div class="logo">
-				<a href="index.html">
-					<h1 class="logo-heading">Vincent R. Hopkins</h1>
-					<h2 class="logo-subheading">Political Researcher | Data Scientist</h2>
-				</a>
-			</div>
-			
-			<!-- Right hand Side of Nav Bar-->
-			<nav class="menu">
-				<ul class="nav-grid">
-					<li> <a  href="about.html" >About</a></li>
-					<li> <a  href="projects.html">Projects</a></li>
-					<li> <a href="https://drive.google.com/open?id=1aK_pIh7rhX1iZZmTcJdw6EH36MGWDOxZ" target="_blank">CV</a></li>
-				</ul>
-			</nav> 
-		</header>
-		<div id="container" class="svg-container">
-		
+	<header class= "site-header flex-wrap">
+		<!-- Left hand Side of Nav Bar-->
+		<div class="logo">
+			<a href="index.html">
+				<h1 class="logo-heading">Vincent R. Hopkins</h1>
+				<h2 class="logo-subheading">Political Researcher | Data Scientist</h2>
+			</a>
 		</div>
-		
-		
-		
-		<script src="https://d3js.org/d3.v4.min.js"></script>
-		<script>
-			
+		<!-- Right hand Side of Nav Bar-->
+		<nav class="menu">
+			<ul class="nav-grid">
+				<li> <a  href="about.html" >About</a></li>
+				<li> <a  href="projects.html">Projects</a></li>
+			</ul>
+		</nav> 
+	</header>
+	<div id="container" class="svg-container"></div>		
 	
-			var svg = d3.select("div#container")
-			.append("svg")
-			.attr("preserveAspectRatio", "xMinYMin meet")
-			.attr("viewBox", "0 0 1000 900")
-			.classed("svg-content", true);
-			width = +svg.attr("width"),
-			height = +svg.attr("height");
-			
-			var simulation = d3.forceSimulation()
-			.force("link", d3.forceLink().id(function(d) { return d.id; }))
-			.force("charge", d3.forceManyBody())
-			.force("center", d3.forceCenter(500, 350));
-			
-			d3.json("../dist/assets/miserables.json", function(error, graph) {
-				if (error) throw error;
-				
-				var link = svg.append("g")
-				.attr("class", "links")
-				.selectAll("line")
-				.data(graph.links)
-				.enter().append("line");
-				
-				var node = svg.append("g")
-				.attr("class", "nodes")
-				.selectAll("circle")
-				.data(graph.nodes)
-				.enter().append("circle")
-				.attr("r", 2.5)
-				.call(d3.drag()
-				.on("start", dragstarted)
-				.on("drag", dragged)
-				.on("end", dragended));
-				
-				simulation
-				.nodes(graph.nodes)
-				.on("tick", ticked);
-				
-				simulation.force("link")
-				.links(graph.links);
-				
-				function ticked() {
-					link
-					.attr("x1", function(d) { return d.source.x; })
-					.attr("y1", function(d) { return d.source.y; })
-					.attr("x2", function(d) { return d.target.x; })
-					.attr("y2", function(d) { return d.target.y; });
-					
-					node
-					.attr("cx", function(d) { return d.x; })
-					.attr("cy", function(d) { return d.y; });
-				}
-			});
-			
-			function dragstarted(d) {
-				if (!d3.event.active) simulation.alphaTarget(0.3).restart();
-				d.fx = d.x;
-				d.fy = d.y;
-			}
-			
-			function dragged(d) {
-				d.fx = d3.event.x;
-				d.fy = d3.event.y;
-			}
-			
-			function dragended(d) {
-				if (!d3.event.active) simulation.alphaTarget(0);
-				d.fx = null;
-				d.fy = null;
-			}
-			
-			// d3.select(window).on('resize',resize);
-			// function resize(){
-				// 	//get width of window
-				// 	//update xScale and rScale
-				// 	//update radius of bubbles 
-				// 	simulation
-				// 	.force('x',d3.forceX(function(d){return xScale(d.n);}))
-				// 	.force('collide',d3.forceCollide(function(d){return rScale(d.m);}))
-				// 	// 0.3 is arbitrary
-				// 	.alpha(0.3)
-				// 	.restart()
-				
-				// 	console.log("hi")
-				// }
-			</script>
-			
-			<!-- 
-				<script src="dist/js/bundle.js"></script>
-			-->
-			
-		</body>
-		</html>
-		
+	<!-- <script src="https://d3js.org/d3.v4.min.js"></script>  -->
+	<script src="dist/js/bundle.js"></script>
+	
+	
+</body>
+</html>

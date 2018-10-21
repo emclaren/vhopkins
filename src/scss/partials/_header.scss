@@ -58,7 +58,7 @@ header{
 	
 	
 	.menu{
-		margin:.5rem auto;
+		margin:.75rem;
 		a{
 			margin:0 0 .5 0;
 			transition: color .5s ease;
@@ -77,13 +77,14 @@ header{
 			li{
 				color: #ffffFf;
 				transition: color 0.3s ease;
+			margin:.75rem;
 			}
 			
 		}
 		.nav-grid{
 			display: flex;
 			justify-content: space-around;
-			width: 100vw;
+			width: 30vw;
 		}
 		&:last-child{
 			a{
