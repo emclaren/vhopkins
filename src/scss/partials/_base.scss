@@ -183,5 +183,10 @@ canvas {
 
 .inline-link{
 	color: #242424;
+	&:hover{
+		color:$font-accent;
+		transition: color 0.5s ease;
+	}
 	
 }
+
