@@ -1,3 +1,10 @@
+
+window.onload = function() {
+  var e = document.getElementById('nav-projects');
+  e.classList.add("selected-nav");  
+};
+
+
 function toggle_visibility(id) {
   var e = document.getElementById(id);
   if(e.style.visibility == 'visible'){
@@ -18,11 +25,15 @@ function rotate_icon(id) {
 
 function grow(id){
   var e = document.getElementById(id);
-  if(e.style.height == '8rem'){
-  e.style.height = '2rem';  
+  console.log(e.style.transitionDelay)
+  if(e.style.transitionDelay == '0s'){
+ 
+  e.classList.remove("expanded"); 
   e.style.transitionDelay =".15s";
   }else{
-  e.style.height = '8rem';
+
+  e.classList.add("expanded"); 
   e.style.transitionDelay =".0s";
   }
 }
+
