@@ -25,7 +25,6 @@ function rotate_icon(id) {
 
 function grow(id){
   var e = document.getElementById(id);
-  console.log(e.style.transitionDelay)
   if(e.style.transitionDelay == '0s'){
  
   e.classList.remove("expanded"); 
