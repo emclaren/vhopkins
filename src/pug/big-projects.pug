@@ -5,9 +5,9 @@ div(class="page-wrapper")
         h2 Portfolio
         div(class="project-page")
            div(class="project-list")
-            h3(onclick="toggle_visibility('project1');rotate_icon('icon1'); grow('project-list-item1');") Data Science <ion-icon name="add" id="icon1"> </ion-icon>
+            h3(class="big-section-title" onclick="toggle_visibility('data-science');rotate_icon('icon1');") Data Science <ion-icon name="add" id="icon1"> </ion-icon>
 
-            div(class="big-portfolio-container")
+            div(class="big-portfolio-container" id="data-science")
                 p(class="big-portfolio-paragraph") Veniam culpa excepteur enim exercitation Veniam culpa excepteur enim exercitation irure occaecat sint. Veniam culpa excepteur enim exercitation irure occaecat sint.Veniam culpa excepteur enim exercitation irure occaecat sint. Veniam culpa excepteur enim exercitation irure occaecat sint.irure occaecat sint. Veniam culpa excepteur enim exercitation irure occaecat sint.
                 h4(class="big-portfolio-figure-header") Environmental discussions on Twitter are highly polarized
                 div(id="figure1" class="big-portfolio-figure-div")
@@ -34,8 +34,6 @@ div(class="page-wrapper")
                     h4(class="predicted figure2-text") Deaths Without Seatbelt Laws (predicted)
                 p(class="big-portfolio-paragraph") Veniam culpa excepteur enim exercitation irure occaecat sint. Veniam culpa excepteur enim exercitation irure occaecat sint.
 
-
-
             div(class="big-portfolio-container")
                 img(src="https://placekitten.com/g/300/300" class="big-portfolio-img")
                 p(class="big-portfolio-paragraph") Veniam culpa excepteur enim exercitation irure occaecat sint. Magna id occaecat proident fugiat deserunt enim veniam deserunt quis enim velit dolore qui. Cupidatat mollit consectetur fugiat culpa eu consequat labore consequat Lorem mollit Lorem anim nulla fugiat. Proident incididunt eiusmod dolor sint veniam esse elit consectetur exercitation proident. Labore exercitation qui anim laboris minim deserunt dolor eu sit aliquip.
@@ -45,18 +43,18 @@ div(class="page-wrapper")
                 img(src="https://placekitten.com/g/300/300" class="big-portfolio-img")
 
 
-            h3 Policy <ion-icon name="add" id="icon1"> </ion-icon>
-            div(class="big-portfolio-container")
+            h3(class="big-section-title" onclick="toggle_visibility('big-policy');rotate_icon('icon2');")  Policy <ion-icon name="add" id="icon2"> </ion-icon>
+            div(class="big-portfolio-container" id="big-policy")
                 p(class="big-portfolio-paragraph") Veniam culpa excepteur enim exercitation irure occaecat sint. Magna id occaecat proident fugiat deserunt enim veniam deserunt quis enim velit dolore qui. Cupidatat mollit consectetur fugiat culpa eu consequat labore consequat Lorem mollit Lorem anim nulla fugiat. Proident incididunt eiusmod dolor sint veniam esse elit consectetur exercitation proident. Labore exercitation qui anim laboris minim deserunt dolor eu sit aliquip.
                 img(src="https://placekitten.com/g/300/300" class="big-portfolio-img")
 
-            h3 Communication  <ion-icon name="add" id="icon1"> </ion-icon>
-            div(class="big-portfolio-container")
+            h3(class="big-section-title" onclick="toggle_visibility('big-communication');rotate_icon('icon3'); ")  Communication  <ion-icon name="add" id="icon3"> </ion-icon>
+            div(class="big-portfolio-container" id="big-communication")
                 p(class="big-portfolio-paragraph") Veniam culpa excepteur enim exercitation irure occaecat sint. Magna id occaecat proident fugiat deserunt enim veniam deserunt quis enim velit dolore qui. Cupidatat mollit consectetur fugiat culpa eu consequat labore consequat Lorem mollit Lorem anim nulla fugiat. Proident incididunt eiusmod dolor sint veniam esse elit consectetur exercitation proident. Labore exercitation qui anim laboris minim deserunt dolor eu sit aliquip.
                 img(src="https://placekitten.com/g/300/300" class="big-portfolio-img")
 
 script(src="https://unpkg.com/ionicons@4.4.6/dist/ionicons.js")
-script(src="dist/js/projects-script.js")
+script(src="dist/js/big-projects-script.js")
 
 
 
