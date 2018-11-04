@@ -1,0 +1,128 @@
+.big-portfolio-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 5rem;
+
+}
+
+.big-portfolio-paragraph {
+    // flex-basis: 30%;
+    max-width: 80%;
+    padding: 1rem;
+    align-self: center;
+    margin: 0 auto;
+    text-align: justify;
+    margin: 0 auto 2rem auto
+}
+
+.big-portfolio-img {
+    margin: 0 auto;
+    width: 100%;
+}
+
+#figure1-img{
+    padding: 2rem 10rem
+}
+
+.big-portfolio-figure-div{
+    width: 83%;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+ .big-portfolio-figure-div h4{
+    line-height:1.4rem;
+    position: absolute;
+    font-size:1.15rem;
+}
+
+
+.big-portfolio-figure-header{
+font-size: 1.3rem !important;
+text-align: center !important;
+width:100% !important;
+}
+
+
+// Figure 1
+.big-portfolio-figure-div h4.figure1-text{
+    top: 15%;
+    max-width:30%;
+}
+
+.big-portfolio-figure-div h4.figure1-text.left{
+    color:rgb(66, 82, 180);
+    left: 16px;
+    text-align: left;
+
+}
+
+.big-portfolio-figure-div h4.figure1-text.right{
+    color:rgb(255, 0, 0);
+    right:16px;
+    text-align:right;
+    max-width:28%;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.curve{
+    position: absolute;
+    top: 20%;
+    width:100px;
+    height:100px;
+    border:solid 3px rgb(66, 82, 180);
+    border-radius: 64px 64px;
+}
+.curve.left{
+    border-color:  transparent transparent rgb(66, 82, 180) transparent  ;
+    transform:rotate(30deg);
+    left: 15%;
+
+}
+.curve.right{
+    border-color:  transparent transparent rgb(255, 0, 0) transparent  ;
+    transform:rotate(330deg);
+    right:15%;
+}
+
+
+
+
+
+
+// Figure 2
+.big-portfolio-figure-div h4.figure2-text{
+    color: #242424;
+    top: 15%;
+    max-width:30%;
+}
+
+
+.big-portfolio-figure-div h4.figure2-text.predicted{
+    color: rgb(255, 0, 0);
+    top: 30%;
+    max-width:14%;
+    right:0;
+    text-align:left;
+}
+
+.big-portfolio-figure-div h4.figure2-text.logged{
+    top: 50%;
+    max-width:15%;
+    left:-30px;
+    transform: rotate(270deg)
+}
+
+.big-portfolio-figure-div h4.figure2-text.before{
+    right: 40%;
+}
+.big-portfolio-figure-div h4.figure2-text.after{
+    left: 63%;
+    top:auto;
+    bottom: 10%;
+}
