@@ -14,7 +14,7 @@
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 5rem;
-    display: none;
+    // display: none;
 
 }
 
@@ -44,7 +44,7 @@
     text-align: center;
     color: white;
 }
- .big-portfolio-figure-div h4{
+.big-portfolio-figure-div h4{
     line-height:1.4rem;
     position: absolute;
     font-size:1.15rem;
@@ -52,9 +52,9 @@
 
 
 .big-portfolio-figure-header{
-font-size: 1.3rem !important;
-text-align: center !important;
-width:100% !important;
+    font-size: 1.3rem !important;
+    text-align: center !important;
+    width:100% !important;
 }
 
 
@@ -94,7 +94,6 @@ width:100% !important;
     border-color:  transparent transparent rgb(66, 82, 180) transparent  ;
     transform:rotate(30deg);
     left: 15%;
-
 }
 .curve.right{
     border-color:  transparent transparent rgb(255, 0, 0) transparent  ;
@@ -139,3 +138,242 @@ width:100% !important;
     top:auto;
     bottom: 10%;
 }
+
+
+// Figure 3
+
+.big-portfolio-figure-div img#figure3{
+    padding:14% 0;
+}
+
+
+.big-portfolio-figure-div h4.figure3-text{
+    color: #242424;
+}
+
+.big-portfolio-figure-div h4.figure3-text.positive{
+    top: 18%;
+    left: 3%;
+    text-align: left;
+}
+
+.big-portfolio-figure-div h4.figure3-text.negative{
+    top: 70%;
+    max-width: 14%;
+    left: 3%;
+    text-align: left;
+}
+
+
+.big-portfolio-figure-div h4.figure3-text.government{
+    top: 3%;
+    width:100%;
+    text-align:center;
+}
+
+
+
+
+.big-portfolio-figure-div h4.figure3-text.each-point{
+    // color: rgb(255, 0, 0);
+    top: 15%;
+    left:57%;
+    font-size:.8rem;
+    max-width:30%;
+    // right:0;
+    width:100%;
+    text-align:left;
+    line-height: 1rem;
+}
+
+
+
+
+.figure3.curve{
+    border-color:  transparent transparent #242424 transparent  ;
+    transform:rotate(145deg);
+    left:51.2%;
+    top:19%;
+    border-width: 1px;
+    width: 50px;
+    height: 50px;
+}
+
+
+// Figure 4
+
+.big-portfolio-figure-div h4{
+    color: #242424;
+    // top: 15%;
+    // left:57%;
+    // font-size:.8rem;
+    // max-width:30%;
+    // // right:0;
+    // width:100%;
+    // text-align:left;
+    // line-height: 1rem;
+}
+
+
+.big-portfolio-figure-div h4.figure4-text.control{
+    // color: rgb(255, 0, 0);
+    bottom: 2%;
+    left:20%;
+    text-align:center;
+}
+.big-portfolio-figure-div h4.figure4-text.treatment1{
+    // color: rgb(255, 0, 0);
+    bottom: 2%;
+    left:45%;
+    text-align:center;
+}
+.big-portfolio-figure-div h4.figure4-text.treatment2{
+    // color: rgb(255, 0, 0);
+    bottom: 2%;
+    left:73%;
+    text-align:center;
+}
+
+.big-portfolio-figure-div h4.figure4-text.financial{
+    top: 3%;
+    width:100%;
+    text-align:center;
+}
+
+
+.big-portfolio-figure-div img#figure4{
+    padding:10%;
+}
+
+.big-portfolio-figure-div h4.figure3-text{
+    color: #242424;
+}
+
+.big-portfolio-figure-div h4.figure4-text.more{
+    top: 10%;
+    left: 0;
+    text-align: left;
+}
+
+.big-portfolio-figure-div h4.figure4-text.fewer{
+    bottom: 5%;
+    max-width: 14%;
+    left: 0;
+    text-align: left;
+}
+
+.big-portfolio-figure-div h4.figure4-text.change{
+    top:50%;
+    max-width: 14%;
+    left: 0;
+    text-align: left;
+}
+
+.big-portfolio-figure-div h4.figure4-text.frequent{
+    // bottom: 5%;
+    top:18%;
+    // max-width: 14%;
+    left: 90%;
+    text-align: left;
+}
+
+.big-portfolio-figure-div h4.figure4-text.infrequent{
+    bottom: 5%;
+    top:53%;
+    // max-width: 14%;
+    left: 90%;
+    text-align: left;
+}
+
+.figure4-upper.curve,.figure4-lower.curve {
+    position: absolute;
+    left: 83%;
+    width: 50px;
+    height: 50px;
+    border:solid 2px #242424;
+    border-radius: 64px 64px;
+    transform:rotate(340deg);
+
+}
+.figure4-upper.curve{
+    border-color:  transparent transparent rgb(255, 0, 0) transparent  ;
+
+    top:17%;
+}
+.figure4-lower.curve{
+    border-color:  transparent transparent rgb(66, 82, 180) transparent  ;
+    // transform:rotate(30deg);
+    top: 55%;
+}
+
+
+
+
+
+
+.big-subheading{
+
+
+}
+
+
+
+
+
+
+.logo{
+	.big-subheading{
+		font-size:.58rem;
+		margin:0;
+		text-transform: capitalize;
+		line-height: 1.1rem
+	}
+
+}
+
+
+
+
+@media screen and (min-width: $break-xsmall) {
+
+	.logo{
+		.big-subheading{
+			font-size: .65rem;
+		}
+	}
+
+}
+
+
+
+
+@media screen and (min-width: $break-small) {
+
+	.logo{
+
+		.big-heading{
+			font-size: 1.1rem;
+		}
+	}
+
+}
+
+
+
+@media screen and (min-width: $break-medium) {
+	.logo{
+		.big-subheading{
+			font-size: .83rem;
+		}
+	}
+}
+
+
+@media screen and (min-width: $break-large) {
+		.big-subheading{
+			font-size: .98rem !important
+		}
+
+}
+
+

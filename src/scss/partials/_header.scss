@@ -2,17 +2,15 @@
 header{
 	position:fixed;
 	z-index:100;
-	width:100%; 
+	width:100%;
 	top:0;
-	max-width:100%; 
+	max-width:100%;
 	text-transform:uppercase;
 	background-color:white;
 	font-family:'Oswald', sans-serif;
 	font-weight:bold;
 	margin:0 auto;
-	
 	justify-content:space-between;
-	
 	display:flex;
 	flex-wrap:wrap;
 	padding-bottom: .6rem;
@@ -33,137 +31,134 @@ header{
 		color: $font-color;
 		transition: color .5s ease;
 		text-decoration:none;
-		}
-		.logo-subheading{
-			font-size:.58rem;
-			margin:0;
-			text-transform: capitalize;
-			line-height: 1.1rem
-		}
-		
-		.logo-heading{
-			font-size: 1.0rem;	
-		}
-	
 	}
-	
-	
+	.logo-subheading{
+		font-size:.58rem;
+		margin:0;
+		text-transform: capitalize;
+		line-height: 1.1rem
+	}
+	.logo-heading{
+		font-size: 1.0rem;
+	}
+}
+
+
+.menu{
+	margin:.75rem;
+	a{
+		margin:0 0 .5 0;
+		transition: color .5s ease;
+		color:$font-color;
+		text-decoration:none;
+		&:visited{
+			color:$font-color;
+		}
+		&:hover{
+			color:$font-accent;
+			transition: color 0.5s ease;
+			text-decoration:underline;
+		}
+		li{
+			color: #ffffFf;
+			transition: color 0.3s ease;
+			margin:.75rem;
+		}
+	}
+	.selected-nav{
+
+		text-decoration:underline;
+	}
+	.nav-grid{
+		display: flex;
+		justify-content: space-between;
+		width: 37vw;
+	}
+	&:last-child{
+		a{
+			margin-right:0;
+		}
+	}
+
+
+}
+
+
+
+@media screen and (min-width: $break-xsmall) {
+	header{
+		padding:0;
+	}
+	.logo{
+		margin:.5rem 1 .5rem 1rem;
+
+		.logo-subheading{
+			font-size: .65rem;
+		}
+	}
+	.menu{
+		.nav-grid{
+			width: 30vw;
+		}
+	}
+}
+
+
+
+
+@media screen and (min-width: $break-small) {
+	header{
+		font-size:1.05rem;
+	}
+	.logo{
+		.logo-subheading{
+			font-size: .65rem;
+		}
+		.logo-heading{
+			font-size: 1.1rem;
+		}
+	}
 	.menu{
 		margin:.75rem;
 		a{
-			margin:0 0 .5 0;
-			transition: color .5s ease;
-			color:$font-color;
-			text-decoration:none;	
-			&:visited{
-				color:$font-color;
-			}
-			&:hover{
-				color:$font-accent;
-				transition: color 0.5s ease;
-				text-decoration:underline;
-			}
-			li{
-				color: #ffffFf;
-				transition: color 0.3s ease;
-				margin:.75rem;
-			}
-		}
-		.selected-nav{
-			
-			text-decoration:underline;
+			margin-left:1rem;
 		}
 		.nav-grid{
-			display: flex;
-			justify-content: space-between;
-			width: 37vw;
-		}
-		&:last-child{
-			a{
-				margin-right:0;
-			}
-		}
-		
-		
-	}
-	
-	
-	
-	@media screen and (min-width: $break-xsmall) {
-		header{
-			padding:0;
-		}
-		.logo{
-			margin:.5rem 1 .5rem 1rem;
-			
-			.logo-subheading{
-				font-size: .65rem;
-			}
-		}
-		.menu{
-			.nav-grid{
-				width: 30vw;
-			}
+			width: auto;
 		}
 	}
-	
-	
-	
-	
-	@media screen and (min-width: $break-small) {
-		header{
-			font-size:1.05rem;
+}
+
+
+
+@media screen and (min-width: $break-medium) {
+	header{
+		font-size:1.15rem
+	}
+	.logo{
+		.logo-subheading{
+			font-size: .7rem;
 		}
-		.logo{
-			.logo-subheading{
-				font-size: .65rem;
-			}
-			.logo-heading{
-				font-size: 1.1rem;
-			}
-		}
-		.menu{
-			margin:.75rem;
-			a{
-				margin-left:1rem;
-			}
-			.nav-grid{
-				width: auto;
-			}
+		.logo-heading{
+			font-size: 1.2rem;
 		}
 	}
-	
-	
-	
-	@media screen and (min-width: $break-medium) {
-		header{
-			font-size:1.15rem
+}
+
+
+@media screen and (min-width: $break-large) {
+	header{
+		font-size:1.45rem
+	}
+	.logo{
+		.logo-subheading{
+			font-size: .82rem;
 		}
-		.logo{
-			.logo-subheading{
-				font-size: .7rem;
-			}
-			.logo-heading{
-				font-size: 1.2rem;
-			}
+		.logo-heading{
+			font-size: 1.45rem;
 		}
 	}
-	
-	
-	@media screen and (min-width: $break-large) {
-		header{
-			font-size:1.45rem
-		}
-		.logo{
-			.logo-subheading{
-				font-size: .82rem;
-			}
-			.logo-heading{
-				font-size: 1.45rem;
-			}
-		}
-	}
-	
-	
-	
-	
+}
+
+
+

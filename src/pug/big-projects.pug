@@ -5,10 +5,11 @@ div(class="page-wrapper")
         h2 Portfolio
         div(class="project-page")
            div(class="project-list")
-            h3(class="big-section-title" onclick="toggle_visibility('data-science');rotate_icon('icon1');") Data Science <ion-icon name="add" id="icon1"> </ion-icon>
+            h3(class="big-section-title" onclick="toggle_visibility('data-science');rotate_icon('icon1');") #1. Visualizing Polarization on the Environment in the US <ion-icon name="add" id="icon1"> </ion-icon>
 
             div(class="big-portfolio-container" id="data-science")
-                p(class="big-portfolio-paragraph") Veniam culpa excepteur enim exercitation Veniam culpa excepteur enim exercitation irure occaecat sint. Veniam culpa excepteur enim exercitation irure occaecat sint.Veniam culpa excepteur enim exercitation irure occaecat sint. Veniam culpa excepteur enim exercitation irure occaecat sint.irure occaecat sint. Veniam culpa excepteur enim exercitation irure occaecat sint.
+
+
                 h4(class="big-portfolio-figure-header") Environmental discussions on Twitter are highly polarized
                 div(id="figure1" class="big-portfolio-figure-div")
                     img(src="dist/assets/img/Viz1_notext.svg" class="big-portfolio-img"  id="figure1-img"  width="100%" height="100%")
@@ -16,7 +17,13 @@ div(class="page-wrapper")
                     div(class="left curve")
                     h4(class="right figure1-text") Republicans talk about<br><span class="underline">taxes</span> & <span class="underline">jobs</span>
                     div(class="right curve")
-                p(class="big-portfolio-paragraph") Veniam culpa excepteur enim exercitation irure occaecat sint. Veniam culpa excepteur enim exercitation irure occaecat sint.
+                p(class="big-portfolio-paragraph") Social media is an increasingly important part of public debate. Behavioural scientists should understand how social media can encourage biased information search—that is, citizens’ selective exposure to ideologically congruent rhetoric.
+                p(class="big-portfolio-paragraph") Here, I combine webscraping, Natural Language Processing, and Social Network Analysis, and to illustrate political polarization about the environment in the US.
+                p(class="big-portfolio-paragraph") First, I used Twitter’s API to identify users who mention either “Democrat” or “Liberal” and “Republican” or “Conservative” in their Twitter bio. Among these users, I scraped more than 1.2 million tweets discussing the environment between June 2017 and April 2018. For example, I collected tweets mentioning hashtags like #Recycle, #Green and #Environment.
+                p(class="big-portfolio-paragraph") Second, I applied a Structural Topic Model to identify the most commonly co-occurring words. This is a fast, easy way to sort large text corpora into a few important categories. For example, the “Pollution” category includes words like “ClimateChange, Pollution, DirtyCoal, Toxic”. The “Jobs” category includes words like “CleanCoal, CarbonTax, Socialism, Taxes”.
+                p(class="big-portfolio-paragraph") Third, I turn this data into a network. Two tweets share a tie if they mention the same topic. I colour each tweet by the party of the account (blue for Democrat, red for Republican) and size each tweet by the number of retweets.
+                p(class="big-portfolio-paragraph") The results are purely descriptive, but they help visualize the “echo chamber” in which environmental discussions often take place (at least in the US).
+
                 h4(class="big-portfolio-figure-header") Seatbelt Laws Reduce Fatalities (UK, 1980 - 1984)
                 div(class="big-portfolio-figure-div")
                     img(src="dist/assets/img/Viz2_notext.svg" class="big-portfolio-img"   width="100%" height="100%")
@@ -25,28 +32,35 @@ div(class="page-wrapper")
                     h4(class="logged figure2-text") Deaths Logged
                     h4(class="predicted figure2-text") Deaths Without Seatbelt Laws (predicted)
                 p(class="big-portfolio-paragraph") Veniam culpa excepteur enim exercitation irure occaecat sint. Veniam culpa excepteur enim exercitation irure occaecat sint.
-                h4(class="big-portfolio-figure-header") Seatbelt Laws Reduce Fatalities (UK, 1980 - 1984)
+                h4(class="big-portfolio-figure-header") Daily Sentiment in the House of Commons (1936 - 2018)
                 div(class="big-portfolio-figure-div")
-                    img(src="dist/assets/img/Viz2_notext.svg" class="big-portfolio-img"   width="100%" height="100%")
-                    h4(class="before figure2-text") Before Policy Change
-                    h4(class="after figure2-text") After Policy Change
-                    h4(class="logged figure2-text") Deaths Logged
-                    h4(class="predicted figure2-text") Deaths Without Seatbelt Laws (predicted)
+                    img(src="dist/assets/img/Viz4_notext.svg"  id="figure3" class="big-portfolio-img"   width="100%" height="100%")
+                    h4(class="positive figure3-text") Positive
+                    h4(class="negative figure3-text") Negative
+                    div(class="figure3 curve")
+                    h4(class="each-point figure3-text") Each point shows the net sentiment for each MP in the House of Commons (coloured by party)
+                    h4(class="government figure3-text") Govnerment MPs are more positive then the opposition
                 p(class="big-portfolio-paragraph") Veniam culpa excepteur enim exercitation irure occaecat sint. Veniam culpa excepteur enim exercitation irure occaecat sint.
-
-            div(class="big-portfolio-container")
-                img(src="https://placekitten.com/g/300/300" class="big-portfolio-img")
-                p(class="big-portfolio-paragraph") Veniam culpa excepteur enim exercitation irure occaecat sint. Magna id occaecat proident fugiat deserunt enim veniam deserunt quis enim velit dolore qui. Cupidatat mollit consectetur fugiat culpa eu consequat labore consequat Lorem mollit Lorem anim nulla fugiat. Proident incididunt eiusmod dolor sint veniam esse elit consectetur exercitation proident. Labore exercitation qui anim laboris minim deserunt dolor eu sit aliquip.
-
-            div(class="big-portfolio-container")
-                p(class="big-portfolio-paragraph") Veniam culpa excepteur enim exercitation irure occaecat sint. Magna id occaecat proident fugiat deserunt enim veniam deserunt quis enim velit dolore qui. Cupidatat mollit consectetur fugiat culpa eu consequat labore consequat Lorem mollit Lorem anim nulla fugiat. Proident incididunt eiusmod dolor sint veniam esse elit consectetur exercitation proident. Labore exercitation qui anim laboris minim deserunt dolor eu sit aliquip.
-                img(src="https://placekitten.com/g/300/300" class="big-portfolio-img")
 
 
             h3(class="big-section-title" onclick="toggle_visibility('big-policy');rotate_icon('icon2');")  Policy <ion-icon name="add" id="icon2"> </ion-icon>
             div(class="big-portfolio-container" id="big-policy")
-                p(class="big-portfolio-paragraph") Veniam culpa excepteur enim exercitation irure occaecat sint. Magna id occaecat proident fugiat deserunt enim veniam deserunt quis enim velit dolore qui. Cupidatat mollit consectetur fugiat culpa eu consequat labore consequat Lorem mollit Lorem anim nulla fugiat. Proident incididunt eiusmod dolor sint veniam esse elit consectetur exercitation proident. Labore exercitation qui anim laboris minim deserunt dolor eu sit aliquip.
-                img(src="https://placekitten.com/g/300/300" class="big-portfolio-img")
+                h4(class="big-portfolio-figure-header") A Randomized Controlled Trial to Increase Blood Donations
+                div(class="big-portfolio-figure-div")
+                    img(src="dist/assets/img/Viz5_notext.svg" id="figure4" class="big-portfolio-img"   width="100%" height="100%")
+                    h4(class="more figure4-text") More blood donations
+                    h4(class="fewer figure4-text") Fewer blood donations
+                    h4(class="infrequent figure4-text") Infrequent blood donors
+                    h4(class="frequent figure4-text") Frequent Blood donors
+                    h4(class="change figure4-text") % change<br>(pre/post)
+                    h4(class="control figure4-text") Control<br> (Voluntary Appeal)
+                    h4(class="treatment1 figure4-text") Treatment #1 <br> (Free Cholesterol Test)
+                    h4(class="treatment2 figure4-text") Treatment #2 <br> (Free Lottery Ticket)
+                    div(class="figure4-upper curve")
+                    div(class="figure4-lower curve")
+                    h4(class="financial figure4-text") Financial incentives can increase donations, but only among infrequent donors
+                p(class="big-portfolio-paragraph") Veniam culpa excepteur enim exercitation irure occaecat sint. Veniam culpa excepteur enim exercitation irure occaecat sint.
+
 
             h3(class="big-section-title" onclick="toggle_visibility('big-communication');rotate_icon('icon3'); ")  Communication  <ion-icon name="add" id="icon3"> </ion-icon>
             div(class="big-portfolio-container" id="big-communication")
@@ -54,7 +68,7 @@ div(class="page-wrapper")
                 img(src="https://placekitten.com/g/300/300" class="big-portfolio-img")
 
 script(src="https://unpkg.com/ionicons@4.4.6/dist/ionicons.js")
-script(src="dist/js/big-projects-script.js")
+//- script(src="dist/js/big-projects-script.js")
 
 
 
