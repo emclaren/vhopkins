@@ -1,72 +1,78 @@
 ////////////////////////////*Work Styling*//////////////////////////////
-#work{
-  padding: 1rem 0;
+
+#work {
   margin: 8rem 0;
   padding: 0;
-  #shuffleGrid{
+
+  #shuffleGrid {
     margin-bottom: 2rem;
   }
-  a{
-    color:$font-color;
-    &:visted{
-      color:$font-color;
+
+  a {
+    color: $font-color;
+
+    &:visited {
+      color: $font-color;
     }
   }
-  h3{
-    font-size:1.5rem;
-    padding: .25rem 0;
+
+  h3 {
+    font-size: 1.5rem;
+    padding: 0.25rem 0;
     transform: translateZ(0);
     -webkit-transform: translateZ(0);
     margin: 0 1rem;
-    display:flex;
-    align-items:center;
-    color:font-color;
+    display: flex;
+    align-items: center;
+    color: font-color;
   }
-  .project-title-span{
+
+  .project-title-span {
     text-decoration: underline;
-    padding: .5rem 0;
-    line-height:1.3rem;
+    padding: 0.5rem 0;
+    line-height: 1.3rem;
   }
-  .project-title{
+
+  .project-title {
     position: absolute;
     transition: color 1s ease;
-    transition: background-color .5s ease;
+    transition: background-color 0.5s ease;
     bottom: 0;
     height: 100%;
-    padding:.5rem;
+    padding: 0.5rem;
     left: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    z-index:20;
-    color:white;    
-    background-color:rgba(0,0,0, .6);
-    width:100%;
-    text-align:center;
-    border-top:none;
+    z-index: 20;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    text-align: center;
+    border-top: none;
+
     @media screen and (min-width: $break-medium) {
-      background-color:rgba(0,0,0, .6);
-      transition: background-color .5s ease;
+      background-color: rgba(0, 0, 0, 0.6);
+      transition: background-color 0.5s ease;
     }
   }
 }
 
-.single-project{
-  max-width:80%;
-  margin:0 auto 3rem auto;
-  h3{
-    font-size:1.5rem;
+.single-project {
+  max-width: 80%;
+  margin: 0 auto 3rem auto;
+
+  h3 {
+    font-size: 1.5rem;
   }
 }
 
-
-
-.project-page{
-  display:flex; 
-  flex-wrap:wrap;
-  
+.project-page {
+  display: flex;
+  flex-wrap: wrap;
 }
-.page-wrapper::after{
+
+.page-wrapper::after {
   content: "";
   background-repeat: no-repeat;
   opacity: 0.2;
@@ -76,82 +82,86 @@
   right: 0;
   background-position: 200% 200%;
   position: fixed;
-  z-index: -1; 
+  z-index: -1;
 }
-.project-list{
-  width:100%;
-  margin:0; 
+
+.project-list {
+  width: 100%;
+  margin: 0;
 }
-#project1, #project2, #project3, #project4, #project5, #ptoject6 {
+
+#project1,
+#project2,
+#project3,
+#project4,
+#project5,
+#ptoject6 {
   visibility: hidden;
-  opacity:0;
-  transition: all .15s ease-in;
-  transition-delay: .15s;
+  opacity: 0;
+  transition: all 0.15s ease-in;
+  transition-delay: 0.15s;
 }
-.project-list-item{
-  // border-radius:5px;
-  // width:100%;
+
+.project-list-item {
   margin: 1rem;
-  height:3rem;
-  
-}
-.project-header{
-
-  font-size:1.00rem;
-  margin:0 0 2rem 0;
-  
+  height: 3rem;
+  transition: all 0.15s ease-in;
+  transition-delay: 0s;
 }
 
-.project-descripton{
-  width:50vw;
-  font-family:'EB Garamond', serif
+.project-header {
+  font-size: 1rem;
+  margin: 0 0 2rem 0;
 }
 
+.project-descripton {
+  width: 50vw;
+  font-family: 'EB Garamond', serif;
+}
 
 @media screen and (min-width: $break-medium) {
-  .project-title-span{
+  .project-title-span {
+    line-height: 1.7rem;
+  }
 
-    line-height:1.7rem;
+  .project-header {
+    font-size: 1.25rem;
   }
-  .project-header{
-    font-size:1.25rem;
-  }
-  .project-list-item{
-    
+
+  .project-list-item {
     margin: 1rem;
-    height:2rem;
-    
+    height: 2rem;
   }
-  .project-list{
-    width:80%;
-    margin:0 5rem;
-    
+
+  .project-list {
+    width: 80%;
+    margin: 0 5rem;
   }
-  
-  #work{ 
-    margin:11rem 1rem;
-    h3{
+
+  #work {
+    margin: 11rem 1rem;
+
+    h3 {
       margin: 0 auto;
     }
   }
 }
 
-
-
 ion-icon {
-  transition: transform ease .3s;
+  transition: transform ease 0.3s;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
   -o-transform: rotate(0deg);
   transform: rotate(0deg);
 }
-.project-description{
-  padding:.5rem 0;
+
+.project-description {
+  padding: 0.5rem 0;
 }
 
 .fa-rotate-45 {
-  transition: transform ease .3s;
+  transition: transform ease 0.3s;
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -159,52 +169,37 @@ ion-icon {
   transform: rotate(45deg);
 }
 
-.project-title-span:hover{
-  cursor:pointer;
-  color:$font-accent;
-  
+.project-title-span:hover {
+  cursor: pointer;
+  color: $font-accent;
 }
 
-figure{
-  width:100%;
+figure {
+  width: 100%;
 }
 
-.project-list-item{
-  transition: all 0.15s ease-in;
-  transition-delay: 0s;
-}
-
-.delay{
+.delay {
   transition-delay: 2s;
 }
 
-
-
-
-.expanded{
-  height:21rem;
-
+.expanded {
+  height: 21rem;
 }
 
-
 @media screen and (min-width: $break-xsmall) {
-  .expanded{
-    height:15rem;
-  
+  .expanded {
+    height: 15rem;
   }
+}
+
+@media screen and (min-width: $break-small) {
+  .expanded {
+    height: 10rem;
   }
+}
 
-  @media screen and (min-width: $break-small) {
-    .expanded{
-      height:10rem;
-    
-    }
-    }
-
-    @media screen and (min-width: $break-medium) {
-      .expanded{
-        height:8rem;
-      
-      }
-      }
-  
+@media screen and (min-width: $break-medium) {
+  .expanded {
+    height: 8rem;
+  }
+}

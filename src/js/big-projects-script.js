@@ -1,4 +1,3 @@
-
 window.onload = function () {
   var e = document.getElementById('nav-projects')
   e.classList.add('selected-nav')
@@ -6,12 +5,12 @@ window.onload = function () {
 
 function toggle_visibility (id) {
   var e = document.getElementById(id)
-  if (e.style.visibility == 'visible') {
-    e.style.visibility = 'hidden'
+  if (e.style.display == 'block') {
+    e.style.display = 'none'
     e.style.opacity = '0'
     e.style.transitionDelay = '.0s'
   } else {
-    e.style.visibility = 'visible'
+    e.style.display = 'block'
     e.style.opacity = '1'
     e.style.transitionDelay = '.15s'
   }
